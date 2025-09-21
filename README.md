@@ -58,9 +58,10 @@ At **14:25**, close any **Short** (`pos = 0`) to reduce overnight downside risk.
 - **Return metric:** 0.41  
 - **Hit Rate (trade/day):** 0.44 / 0.53  
 - **Max Drawdown (MDD):** 82.93 (~5.28%)
+- **Sharp Ratio:** 4.10 (before fees), 3.23 (after fees)
+- 
+<img width="1510" height="404" alt="image" src="https://github.com/user-attachments/assets/cadb7f85-b953-4099-bb00-dbc4554c89c8" />
 
-**Equity/Return Plots:** *(in-sample)*  
-![In-sample PnL & Return](/mnt/data/3f4e39ad-d372-4418-b712-9bdf91553ce0.png)
 
 ---
 
@@ -74,20 +75,6 @@ At **14:25**, close any **Short** (`pos = 0`) to reduce overnight downside risk.
 - **Return metric:** 0.33  
 - **Hit Rate (trade/day):** 0.45 / 0.56  
 - **Max Drawdown (MDD):** 41.77 (~3.5%)
+- - **Sharp Ratio:** 4.41 (before fees), 3.12 (after fees)
+<img width="1640" height="850" alt="image" src="https://github.com/user-attachments/assets/0ebab315-f0ba-4cfb-ad41-8e5371d030e2" />
 
-**Equity/Return Plots:** *(out-of-sample)*  
-![Out-of-sample PnL & Return](/mnt/data/d8f5808d-81b1-45f4-949f-01a83c522218.png)
-
----
-
-## Key Takeaways
-- **Consistency:** Profitable, rising equity curves in and out of sample with ~44–45% hit rate.  
-- **Risk Control:** Low MDD (3.5–5.3%); daily short-closure rule mitigates tail risk.  
-- **Sensitivity:** Performance hinges on `slope_threshold` and RSI bands (`t2–t5`)—tune with walk-forward.
-
----
-
-## How to Run
-```bash
-pip install pandas numpy matplotlib yfinance ta
-jupyter notebook 12.WMA_Signal_RSI.ipynb
